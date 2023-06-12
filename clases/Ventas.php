@@ -47,6 +47,8 @@ class ventas{
 		for ($i=0; $i < count($datos) ; $i++) { 
 			$d=explode("||", $datos[$i]);
 
+			$precio_de_ventas = $d[3] * $d[6];
+
 			$sql="INSERT into ventas (id_venta,
 										id_cliente,
 										id_producto,
@@ -57,9 +59,16 @@ class ventas{
 									'$d[5]',
 									'$d[0]',
 									'$idusuario',
-									'$d[3]',
+									'$precio_de_ventas',
 									'$fecha')";
 			$r=$r + $result=mysqli_query($conexion,$sql);
+
+			$cantidad_actual = (self::obtenDatosProducto($d[0]))['cantidad'];
+
+			$nueva_cantidad = $cantidad_actual - $d[6];
+
+			$sql="UPDATE articulos SET cantidad = '$nueva_cantidad' WHERE id_producto = '$d[0]'";
+			$result=mysqli_query($conexion,$sql);
 		}
 
 		return $r;

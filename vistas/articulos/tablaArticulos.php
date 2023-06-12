@@ -11,17 +11,15 @@
 					cat.nombreCategoria,
 					art.fechaCaptura,
 					art.id_producto
-		  from articulos as art 
-		  inner join imagenes as img
-		  on art.id_imagen=img.id_imagen
-		  inner join categorias as cat
-		  on art.id_categoria=cat.id_categoria";
+		  FROM articulos AS art 
+		  INNER JOIN imagenes AS img ON art.id_imagen=img.id_imagen
+		  INNER JOIN categorias AS cat ON art.id_categoria=cat.id_categoria";
 	$result=mysqli_query($conexion,$sql);
 
  ?>
 
 <table class="table table-hover table-condensed table-bordered" style="text-align: center;">
-	<caption><label>Platos</label></caption>
+	<caption><label>PLATOS</label></caption>
 	<tr>
 		<td>Nombre</td>
 		<td>Descripcion</td>
@@ -56,7 +54,7 @@
 			</span>
 		</td>
 		<td>
-			<span class="btn btn-danger btn-xs" onclick="eliminaArticulo('<?php echo $ver[6] ?>')">
+			<span class="btn btn-danger btn-xs" onclick="eliminaArticulo('<?php echo $ver[7] ?>')">
 				<span class="glyphicon glyphicon-remove"></span>
 			</span>
 		</td>

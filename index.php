@@ -22,7 +22,7 @@
 	<script src="js/funciones.js"></script>
 </head>
 <body style="background-color: orange">
-<div class="col-md-12" style="background: linear-gradient(to bottom, maroon 50%, darkorange 50%);">
+<div class="col-md-12" style="background: linear-gradient(to bottom, #ffbf77 50%, #ff9c2d 50%);">
     <div class="escudo pull-left">
         <img src="img/ministeridesalud.png" width="100px">
     </div>
@@ -66,9 +66,6 @@
 	<footer style="position: fixed; bottom: 0; right: 0; margin: 10px; text-align: center;">
     <p><b><small>Desarrollado por Miguel Espinoza Mollinedo</small></b></p>
     <p><b><small>Email: miguelespmol@gmail.com</small></b></p>
-    <a href="https://wa.me/70556553">
-        <img src="img/wsapp.png" alt="Logo de WhatsApp" width="30px">
-    </a>
 	</footer>
 
 </body>
