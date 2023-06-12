@@ -32,7 +32,8 @@
 				$descripcion."||".
 				$precio."||".
 				$ncliente."||".
-				$idcliente;
+				$idcliente."||".
+				$cantidad;
 
 	$_SESSION['tablaComprasTemp'][]=$articulo;
 
