@@ -18,7 +18,7 @@
  		<td>Quitar</td>
  	</tr>
  	<?php 
- 	$total=0;//esta variable tendra el total de la compra en dinero
+ 	$total= 0;//esta variable tendra el total de la compra en dinero
  	$cliente=""; //en esta se guarda el nombre del cliente
  		if(isset($_SESSION['tablaComprasTemp'])):
  			$i=0;
@@ -39,7 +39,7 @@
  	</tr>
 
  <?php 
- 		$total=$total + $d[3];
+ 		$total = $total + ($d[3] * $d[6]);
  		$i++;
  		$cliente=$d[4];
  	}
