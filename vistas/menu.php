@@ -10,11 +10,11 @@
 
 
 
-<body style="background-color: orange">
+<body style="margin: 0; padding: 10; background-color: #e0e0e0">
 
   <!-- Begin Navbar -->
   <div id="nav">
-    <div class="navbar navbar-inverse navbar-fixed-top navbar-background" data-spy="affix" data-offset-top="100" style="background: linear-gradient(to bottom, #ffbf77 50%, #ff9c2d 50%);">
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-background" data-spy="affix" data-offset-top="100" style="background: #ff9c2d;">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -29,7 +29,7 @@
 
           <ul class="nav navbar-nav navbar-right">
 
-            <li class="active"><a href="inicio.php" style="background: linear-gradient(to bottom, #ffbf77 50%, #ff9c2d 50%);"><span class="glyphicon glyphicon-home"></span> INICIO</a>
+            <li class="active"><a href="inicio.php" style="background: #ff9c2d;"><span class="glyphicon glyphicon-home"></span> INICIO</a>
             </li>
 
             

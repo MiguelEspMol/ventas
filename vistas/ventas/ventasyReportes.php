@@ -21,20 +21,20 @@
 	<div class="col-sm-1"></div>
 	<div class="col-sm-10">
 	<div class="table-responsive">
-	<table class="table table-hover table-condensed table-bordered" style="text-align: center;">
+	<table class="table table-hover table-condensed table-bordered" style="text-align: center; border: 2px solid black;">
                 <caption><label>Ventas por Fecha</label></caption>
                 <tr>
-                    <td>Fecha</td>
-                    <td>Nombre del Plato</td>
-                    <td>Total de Platos Vendidos</td>
-          			<td>Total de Venta del Dia</td>
+					<td style="border: 1px solid black; background-color: #ffbf77;">Fecha</td>
+					<td style="border: 1px solid black; background-color: #ffbf77;">Nombre del Plato</td>
+					<td style="border: 1px solid black; background-color: #ffbf77;">Total de Platos Vendidos</td>
+					<td style="border: 1px solid black; background-color: #ffbf77;">Total de Venta del Dia</td>
                 </tr>
                 <?php while($ver = mysqli_fetch_array($result)): ?>
                     <tr>
-                        <td><?php echo $ver['fechaCompra']; ?></td>
-                        <td><?php echo $ver['nombre']; ?></td>
-                        <td><?php echo $ver['total_articulos_vendidos']; ?></td>
-            			<td><?php echo "Bs. " . $ver['total_venta_producto']; ?></td>
+                        <td style="border: 1px solid black; background-color: #e0e0e0;"><?php echo $ver['fechaCompra']; ?></td>
+                        <td style="border: 1px solid black; background-color: #e0e0e0;"><?php echo $ver['nombre']; ?></td>
+                        <td style="border: 1px solid black; background-color: #e0e0e0;"><?php echo $ver['total_articulos_vendidos']; ?></td>
+            			<td style="border: 1px solid black; background-color: #e0e0e0;"><?php echo "Bs. " . $ver['total_venta_producto']; ?></td>
                     </tr>
                 <?php endwhile; ?>
             </table>

@@ -63,10 +63,11 @@
 			<div class="col-sm-4"></div>
 		</div>
 	</div>
-	<footer style="position: fixed; bottom: 0; right: 0; margin: 10px; text-align: center;">
-    <p><b><small>Desarrollado por Miguel Espinoza Mollinedo</small></b></p>
-    <p><b><small>Email: miguelespmol@gmail.com</small></b></p>
-	</footer>
+	<footer style="position: fixed; bottom: 0; left: 0; width: 100%; margin: 0; padding: 10px; background-color: #ffbf77; text-align: center;">
+    <div style="background-color: #ffbf77; padding: 10px;">
+        <p><b><small>Desarrollado por Miguel Espinoza Mollinedo</small></b> | <b><small>Email: miguelespmol@gmail.com</small></b></p>
+    </div>
+</footer>
 
 </body>
 </html>
