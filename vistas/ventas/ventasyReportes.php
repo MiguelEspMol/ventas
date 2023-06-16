@@ -8,7 +8,7 @@
 
 	$obj= new ventas();
 
-	$sql = "SELECT v.fechaCompra, a.nombre, COUNT(v.id_producto) AS total_articulos_vendidos, SUM(v.precio) AS total_venta_producto
+	$sql = "SELECT v.fechaCompra, a.nombre, v.cantidad AS total_articulos_vendidos, v.precio AS total_venta_producto
             FROM ventas v
             INNER JOIN articulos a ON v.id_producto = a.id_producto
             GROUP BY v.fechaCompra, a.nombre";

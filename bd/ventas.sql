@@ -60,5 +60,6 @@ create table ventas(
 				id_producto int,
 				id_usuario int,
 				precio float,
+				cantidad float,
 				fechaCompra date
 					);

@@ -54,12 +54,14 @@ class ventas{
 										id_producto,
 										id_usuario,
 										precio,
+										cantidad,
 										fechaCompra)
 							values ('$idventa',
 									'$d[5]',
 									'$d[0]',
 									'$idusuario',
 									'$precio_de_ventas',
+									'$d[6]',
 									'$fecha')";
 			$r=$r + $result=mysqli_query($conexion,$sql);
 
