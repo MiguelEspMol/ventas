@@ -8,10 +8,18 @@
 
 	$obj= new ventas();
 
-	$sql = "SELECT v.fechaCompra, a.nombre, v.cantidad AS total_articulos_vendidos, v.precio AS total_venta_producto
-            FROM ventas v
-            INNER JOIN articulos a ON v.id_producto = a.id_producto
-            GROUP BY v.fechaCompra, a.nombre";
+	$sql = "SELECT fechaCompra, nombre, total_articulos_vendidos, total_venta_producto
+	FROM (
+		SELECT v.fechaCompra, a.nombre, SUM(v.cantidad) AS total_articulos_vendidos, SUM(v.precio) AS total_venta_producto
+		FROM ventas v
+		INNER JOIN articulos a ON v.id_producto = a.id_producto
+		GROUP BY v.fechaCompra, a.nombre
+		UNION ALL
+		SELECT fechaCompra, 'Total del Dia', NULL, SUM(precio)
+		FROM ventas
+		GROUP BY fechaCompra
+	) AS v
+	ORDER BY fechaCompra, nombre;";
 	
 	$result=mysqli_query($conexion,$sql); 
 	?>

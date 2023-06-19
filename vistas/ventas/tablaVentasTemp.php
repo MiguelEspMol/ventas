@@ -5,17 +5,17 @@
  ?>
 
  <h4>Hacer venta: </h4>
- <table class="table table-bordered table-hover table-condensed" style="text-align: center;">
+ <table class="table table-bordered table-hover table-condensed" style="text-align: center; border: 2px solid black;">
  	<caption>
  		<span class="btn btn-success" onclick="crearVenta()"> Generar venta
 		 <span class="glyphicon glyphicon-usd"></span>
  		</span>
  	</caption>
  	<tr>
- 		<td>Nombre</td>
- 		<td>Precio</td>
- 		<td>Cantidad</td>
- 		<td>Quitar</td>
+ 		<td style="border: 2px solid black; background-color: #ffbf77;">Nombre</td>
+ 		<td style="border: 2px solid black; background-color: #ffbf77;">Precio</td>
+ 		<td style="border: 2px solid black; background-color: #ffbf77;">Cantidad</td>
+ 		<td style="border: 2px solid black; background-color: #ffbf77;">Quitar</td>
  	</tr>
  	<?php 
  	$total= 0;//esta variable tendra el total de la compra en dinero
@@ -28,10 +28,10 @@
  	 ?>
 
  	<tr>
- 		<td><?php echo $d[1] ?></td>
- 		<td><?php echo $d[3] ?></td>
- 		<td><?php echo $d[6]; ?></td>
- 		<td>
+ 		<td style="border: 2px solid black;"><?php echo $d[1] ?></td>
+ 		<td style="border: 2px solid black;"><?php echo $d[3] ?></td>
+ 		<td style="border: 2px solid black;"><?php echo $d[6]; ?></td>
+ 		<td style="border: 2px solid black;">
  			<span class="btn btn-danger btn-xs" onclick="quitarP('<?php echo $i; ?>')">
  				<span class="glyphicon glyphicon-remove"></span>
  			</span>
