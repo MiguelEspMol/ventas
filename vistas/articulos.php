@@ -25,20 +25,20 @@ if(isset($_SESSION['usuario'])){
 				<div class="col-sm-4">
 					<form id="frmArticulos" enctype="multipart/form-data">
 						<label>Categoria</label>
-						<select class="form-control input-sm" id="categoriaSelect" name="categoriaSelect">
+						<select class="form-control input-sm" id="categoriaSelect" name="categoriaSelect" style="border: 1px solid black;">
 							<option value="A">Selecciona Categoria</option>
 							<?php while($ver=mysqli_fetch_row($result)): ?>
 								<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
 							<?php endwhile; ?>
 						</select>
 						<label>Nombre</label>
-						<input type="text" class="form-control input-sm" id="nombre" name="nombre">
+						<input type="text" class="form-control input-sm" id="nombre" name="nombre" style="border: 1px solid black;">
 						<label>Descripcion</label>
-						<input type="text" class="form-control input-sm" id="descripcion" name="descripcion">
+						<input type="text" class="form-control input-sm" id="descripcion" name="descripcion" style="border: 1px solid black;">
 						<label>Cantidad</label>
-						<input type="text" class="form-control input-sm" id="cantidad" name="cantidad">
+						<input type="text" class="form-control input-sm" id="cantidad" name="cantidad" style="border: 1px solid black;">
 						<label>Precio</label>
-						<input type="text" class="form-control input-sm" id="precio" name="precio">
+						<input type="text" class="form-control input-sm" id="precio" name="precio" style="border: 1px solid black;">
 						<label>Imagen</label>
 						<input type="file" id="imagen" name="imagen">
 						<p></p>

@@ -122,6 +122,21 @@ class ventas{
 
 		return $total;
 	}
+
+	public function obtenCantidadDisponible($idproducto){
+		$c = new conectar();
+		$conexion = $c->conexion();
+	
+		$sql = "SELECT cantidad 
+					FROM articulos 
+					WHERE id_producto = '$idproducto'";
+		$result = mysqli_query($conexion, $sql);
+	
+		$ver = mysqli_fetch_row($result);
+	
+		return $ver[0];
+	}
+	
 }
 
 ?>

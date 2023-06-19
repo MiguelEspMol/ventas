@@ -19,7 +19,7 @@ if(isset($_SESSION['usuario'])){
 				<div class="col-sm-4">
 					<form id="frmCategorias">
 						<label>Ingresar los Almuerzos</label>
-						<input type="text" class="form-control input-sm" name="categoria" id="categoria">
+						<input type="text" class="form-control input-sm" name="categoria" id="categoria" style="border: 1px solid black;">
 						<p></p>
 						<span class="btn btn-primary" id="btnAgregaCategoria">Agregar</span>
 					</form>

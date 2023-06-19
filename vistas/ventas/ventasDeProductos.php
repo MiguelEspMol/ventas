@@ -11,8 +11,8 @@ $conexion=$c->conexion();
 	<div class="col-sm-4">
 		<form id="frmVentasProductos">
 			<label>Almuerzo</label>
-			<select class="form-control input-sm" id="productoVenta" name="productoVenta">
-				<option value="A">Selecciona</option>
+			<select class="form-control input-sm" id="productoVenta" name="productoVenta" style="border: 1px solid black;">
+				<option value="A">Seleccionar</option>
 				<?php
 				$sql="SELECT id_producto,
 				nombre
@@ -25,9 +25,9 @@ $conexion=$c->conexion();
 				<?php endwhile; ?>
 			</select>
 			<label>Cantidad</label>
-			<input type="text" class="form-control input-sm" id="cantidadV" name="cantidadV">
+			<input type="text" class="form-control input-sm" id="cantidadV" name="cantidadV" style="border: 1px solid black;">
 			<label>Precio</label>
-			<input readonly="" type="text" class="form-control input-sm" id="precioV" name="precioV">
+			<input readonly="" type="text" class="form-control input-sm" id="precioV" name="precioV" style="border: 1px solid black;">
 			<p></p>
 			<span class="btn btn-primary" id="btnAgregaVenta">Agregar</span>
 			<span class="btn btn-danger" id="btnVaciarVentas">Vaciar ventas</span>
@@ -56,12 +56,27 @@ $conexion=$c->conexion();
 
 					$('#descripcionV').val(dato['descripcion']);
 					$('#cantidadV').val(dato['cantidad']);
+					$('#cantidadV').data('cantidad-disponible', dato['cantidad']);
 					$('#precioV').val(dato['precio']);
 
 					$('#imgProducto').prepend('<img class="img-thumbnail" id="imgp" src="' + dato['ruta'] + '" />');
 				}
 			});
 		});
+
+
+		function validarCantidad(formId) {
+    		var cantidadV = parseInt($('#cantidadV').val());
+    		var cantidadDisponible = parseInt($('#cantidadV').data('cantidad-disponible'));
+
+    	if (cantidadV > cantidadDisponible) {
+        	alertify.alert("Cantidad mayor a la disponible!!");
+        	return false;
+    	}
+
+    	return true;
+		}
+
 
 		$('#btnAgregaVenta').click(function(){
 			vacios=validarFormVacio('frmVentasProductos');
@@ -70,6 +85,10 @@ $conexion=$c->conexion();
 				alertify.alert("Debes llenar todos los campos!!");
 				return false;
 			}
+
+			if (!validarCantidad('frmVentasProductos')) {
+     		   return false;
+    		}
 
 			datos=$('#frmVentasProductos').serialize();
 			$.ajax({
