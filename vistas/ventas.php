@@ -17,8 +17,8 @@
 		 <h1>Venta de Almuerzos</h1>
 		 <div class="row">
 		 	<div class="col-sm-12">
-		 		<span class="btn btn-default" id="ventaProductosBtn">Vender Almuerzo</span>
-		 		<span class="btn btn-default" id="ventasHechasBtn">Ventas Hechas</span>
+		 		<span class="btn btn-default" id="ventaProductosBtn" style="border: 1px solid black; background-color: #ffbf77;">Vender Almuerzo</span>
+		 		<span class="btn btn-default" id="ventasHechasBtn" style="border: 1px solid black; background-color: #ffbf77;">Ventas Hechas</span>
 		 	</div>
 		 </div>
 		 <div class="row">

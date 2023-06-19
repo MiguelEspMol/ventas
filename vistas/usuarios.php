@@ -15,13 +15,13 @@ if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='admin'){
 				<div class="col-sm-4">
 					<form id="frmRegistro">
 						<label>Nombre</label>
-						<input type="text" class="form-control input-sm" name="nombre" id="nombre">
+						<input type="text" class="form-control input-sm" name="nombre" id="nombre" style="border: 1px solid black;">
 						<label>Apellido</label>
-						<input type="text" class="form-control input-sm" name="apellido" id="apellido">
+						<input type="text" class="form-control input-sm" name="apellido" id="apellido" style="border: 1px solid black;">
 						<label>Usuario</label>
-						<input type="text" class="form-control input-sm" name="usuario" id="usuario">
+						<input type="text" class="form-control input-sm" name="usuario" id="usuario" style="border: 1px solid black;">
 						<label>Password</label>
-						<input type="text" class="form-control input-sm" name="password" id="password">
+						<input type="text" class="form-control input-sm" name="password" id="password" style="border: 1px solid black;">
 						<p></p>
 						<span class="btn btn-primary" id="registro">Registrar</span>
 
