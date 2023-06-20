@@ -29,7 +29,7 @@
 	<div class="col-sm-1"></div>
 	<div class="col-sm-10">
 	<div class="table-responsive">
-	<table class="table table-hover table-condensed table-bordered" style="text-align: center; border: 2px solid black;">
+	<table id="tablaVentas" class="table table-hover table-condensed table-bordered" style="text-align: center; border: 2px solid black;">
                 <caption><label>Ventas por Fecha</label></caption>
                 <tr>
 					<td style="border: 1px solid black; background-color: #ffbf77;">Fecha</td>
@@ -38,7 +38,7 @@
 					<td style="border: 1px solid black; background-color: #ffbf77;">Total de Venta del Dia</td>
                 </tr>
                 <?php while($ver = mysqli_fetch_array($result)): ?>
-                    <tr>
+                    <tr class="fila-venta" >
                         <td style="border: 1px solid black; background-color: #e0e0e0;"><?php echo $ver['fechaCompra']; ?></td>
                         <td style="border: 1px solid black; background-color: #e0e0e0;"><?php echo $ver['nombre']; ?></td>
                         <td style="border: 1px solid black; background-color: #e0e0e0;"><?php echo $ver['total_articulos_vendidos']; ?></td>
@@ -48,7 +48,7 @@
             </table>
 	</div>
 
-	<form id="formFechas">
+	<form id="formFechas" action="../procesos/ventas/proceso_ventas.php" method="POST">
   		<div class="form-group">
     		<label for="fechaInicio">Fecha de inicio:</label>
     		<input type="date" class="form-control" id="fechaInicio" name="fechaInicio" style="border: 1px solid black; background-color: #ffbf77;">
@@ -57,7 +57,7 @@
     		<label for="fechaFin">Fecha de fin:</label>
     		<input type="date" class="form-control" id="fechaFin" name="fechaFin" style="border: 1px solid black; background-color: #ffbf77;">
   		</div>
-  		<button type="submit" class="btn btn-primary">Buscar Ventas</button>
+  		<button type="submit" class="btn btn-primary" id="buscarFechas">Buscar Ventas</button>
   		<button type="button" class="btn btn-danger" id="btnVaciarVentas">Vaciar Ventas</button>
 	</form>
 
@@ -78,6 +78,38 @@ $(document).ready(function() {
 			}
 		 });
 	 });
+
+	 $('#btnbuscarFechas').on('click', '#formFechas button[type="submit"]', function() {
+        var fechas = [];
+
+        $('.fila-venta').each(function() {
+            var fecha = $(this).find('td:first').text();
+            fechas.push(fecha);
+        });
+
+        $('#formFechas').data('fechas', fechas);
+    });
+
  });
+
+ $(document).ready(function() {
+    // Agrega un controlador de eventos para el clic en el botón
+    $('#btnVaciarVentas').click(function() {
+      // Vaciar los datos de la tabla
+      $('#tablaVentas').empty();
+
+	  $('#tablaVentas').attr('hidden', true);
+    });
+
+    // Agrega un controlador de eventos para el envío del formulario
+    $('#formFechas').submit(function(event) {
+      event.preventDefault();
+
+      // ... código para realizar la búsqueda de ventas ...
+
+      // Mostrar la tabla eliminando el atributo "hidden"
+      $('#tablaVentas').removeAttr('hidden');
+    });
+  });
 
 </script>
