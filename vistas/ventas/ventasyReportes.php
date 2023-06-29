@@ -69,7 +69,9 @@
 </div>
 
 <script>
+
 $(document).ready(function() {
+
 	$('#btnVaciarVentasHechas').click(function() {
 		$.ajax({
 			url: "../procesos/ventas/vaciarTempHechas.php",
@@ -78,6 +80,7 @@ $(document).ready(function() {
 			}
 		 });
 	 });
+
 
 	 $('#btnbuscarFechas').on('click', '#formFechas button[type="submit"]', function() {
         var fechas = [];
@@ -90,10 +93,7 @@ $(document).ready(function() {
         $('#formFechas').data('fechas', fechas);
     });
 
- });
 
- $(document).ready(function() {
-    // Agrega un controlador de eventos para el clic en el botón
     $('#btnVaciarVentas').click(function() {
       // Vaciar los datos de la tabla
       $('#tablaVentas').empty();
@@ -101,15 +101,10 @@ $(document).ready(function() {
 	  $('#tablaVentas').attr('hidden', true);
     });
 
-    // Agrega un controlador de eventos para el envío del formulario
-    $('#formFechas').submit(function(event) {
-      event.preventDefault();
-
-      // ... código para realizar la búsqueda de ventas ...
 
       // Mostrar la tabla eliminando el atributo "hidden"
       $('#tablaVentas').removeAttr('hidden');
     });
-  });
+
 
 </script>

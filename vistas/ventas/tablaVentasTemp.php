@@ -16,6 +16,7 @@
  		<td style="border: 2px solid black; background-color: #ffbf77;">Precio</td>
  		<td style="border: 2px solid black; background-color: #ffbf77;">Cantidad</td>
  		<td style="border: 2px solid black; background-color: #ffbf77;">Quitar</td>
+		<td style="border: 2px solid black; background-color: #ffbf77;">Ticket</td>
  	</tr>
  	<?php 
  	$total= 0;//esta variable tendra el total de la compra en dinero
@@ -36,6 +37,12 @@
  				<span class="glyphicon glyphicon-remove"></span>
  			</span>
  		</td>
+		 <td style="border: 2px solid black;">
+            <a href="fpdf/ticketVenta.php" target="_blank" class="btn btn-success"><i class="fas fa-file-pdf"></i>
+                Ticket
+            </a>
+        </td>
+
  	</tr>
 
  <?php 

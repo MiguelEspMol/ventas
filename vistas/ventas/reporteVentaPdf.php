@@ -7,18 +7,12 @@
 
 	$c=new conectar();
 	$conexion= $c->conexion();	
-	$idventa=$_GET['idventa'];
+	$fecha=$_GET['fechaCompra'];
 
- $sql="SELECT ve.id_venta,
-		ve.fechaCompra,
-		ve.id_cliente,
-		art.nombre,
-        art.precio,
-        art.descripcion
-	from ventas  as ve 
-	inner join articulos as art
-	on ve.id_producto=art.id_producto
-	and ve.id_venta='$idventa'";
+	$sql = "SELECT ve.id_venta, ve.fechaCompra, ve.id_cliente, art.nombre, art.precio, art.descripcion
+	FROM ventas AS ve
+	INNER JOIN articulos AS art ON ve.id_producto = art.id_producto
+	AND ve.id_venta = '$id_venta'";
 
 $result=mysqli_query($conexion,$sql);
 
@@ -37,7 +31,7 @@ $result=mysqli_query($conexion,$sql);
  	<link rel="stylesheet" type="text/css" href="../../librerias/bootstrap/css/bootstrap.css">
  </head>
  <body>
- 		<img src="../../img/ventas.jpg" width="200" height="200">
+ 		<img src="../../img/logoCaja.jpg" width="200" height="200">
  		<br>
  		<table class="table">
  			<tr>
@@ -78,13 +72,13 @@ $result=mysqli_query($conexion,$sql);
  			 ?>
 
  			<tr>
- 				<td><?php echo $ver[3]; ?></td>
- 				<td><?php echo $ver[4]; ?></td>
+ 				<td><?php echo $mostrar[3]; ?></td>
+ 				<td><?php echo $mostrar[4]; ?></td>
  				<td>1</td>
- 				<td><?php echo $ver[5]; ?></td>
+ 				<td><?php echo $mostrar[5]; ?></td>
  			</tr>
  			<?php 
- 				$total=$total + $ver[4];
+ 				$total=$total + $mostrar[4];
  			endwhile;
  			 ?>
  			 <tr>

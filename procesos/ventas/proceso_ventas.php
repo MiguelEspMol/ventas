@@ -31,6 +31,11 @@ $sql = "SELECT fechaCompra, nombre, total_articulos_vendidos, total_venta_produc
 
 $result = mysqli_query($conexion, $sql);
 
+
+$totalPlatosVendidos = 0;
+$totalVentas = 0;
+$totalVentaDia = 0;
+
 // Generar la tabla de ventas con los resultados obtenidos
 echo '<body style="background-color: #f5f5f5;">';
 echo '<div class="d-flex justify-content-center">';
@@ -45,6 +50,14 @@ echo '<td style="border: 1px solid black; background-color: #ffbf77;">Total de V
 echo '</tr>';
 
 while ($ver = mysqli_fetch_array($result)) {
+
+    $totalPlatosVendidos += $ver['total_articulos_vendidos'];
+
+    if ($ver['nombre'] === 'Total del Dia') {
+        $totalVentaDia += $ver['total_venta_producto'];
+    }
+
+
     echo '<tr>';
     echo '<td style="border: 1px solid black; background-color: #e0e0e0;">' . $ver['fechaCompra'] . '</td>';
     echo '<td style="border: 1px solid black; background-color: #e0e0e0;">' . $ver['nombre'] . '</td>';
@@ -52,6 +65,19 @@ while ($ver = mysqli_fetch_array($result)) {
     echo '<td style="border: 1px solid black; background-color: #e0e0e0;">Bs. ' . $ver['total_venta_producto'] . '</td>';
     echo '</tr>';
 }
+
+echo '<tr>';
+echo '<td style="border: 1px solid black; background-color: #e0e0e0;" colspan="2">Total General</td>';
+echo '<td style="border: 1px solid black; background-color: #e0e0e0;">' . $totalPlatosVendidos . '</td>';
+echo '<td style="border: 1px solid black; background-color: #e0e0e0;">Bs. ' . $totalVentaDia . '</td>';
+echo '<td style="border: 1px solid black; background-color: #e0e0e0;"></td>';
+echo '<td style="border: 1px solid black; background-color: #ffbf77;">
+            <a href="../../vistas/fpdf/reporteVenta.php" target="_blank" class="btn btn-success"><i class="fas fa-file-pdf"></i>
+                Reporte
+            </a>
+        </td>';
+echo '</tr>';
+    
 
 echo '</table>';
 echo '</div>';

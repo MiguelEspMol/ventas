@@ -3,7 +3,7 @@
 require_once '../../librerias/dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 
-$id=$_GET['idventa'];
+$id_venta = $_GET['id_venta'];
 // Introducimos HTML de prueba
 function file_get_contents_curl($url) {
     $ch = curl_init();
@@ -18,7 +18,7 @@ function file_get_contents_curl($url) {
     return $data;
 }
 
- $html=file_get_contents("http://localhost/ventasAlmacen/vistas/ventas/rerpoteVentaPdf.php?idventa=".$id);
+ $html=file_get_contents("http://localhost/ventas/vistas/ventas/reporteVentaPdf.php?fechaCompra=".$id_venta);
 
 
  
@@ -30,7 +30,7 @@ $pdf->set_paper("letter", "portrait");
 //$pdf->set_paper(array(0,0,104,250));
  
 // Cargamos el contenido HTML.
-$pdf->load_html($html);
+$pdf->load_html(utf8_decode($html));
  
 // Renderizamos el documento PDF.
 $pdf->render();
