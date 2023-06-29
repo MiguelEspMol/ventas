@@ -80,9 +80,9 @@ $(document).ready(function() {
 			}
 		 });
 	 });
+});
 
-
-	 $('#btnbuscarFechas').on('click', '#formFechas button[type="submit"]', function() {
+$('#buscarFechas').on('click', '#formFechas button[type="submit"]', function() {
         var fechas = [];
 
         $('.fila-venta').each(function() {
@@ -93,18 +93,14 @@ $(document).ready(function() {
         $('#formFechas').data('fechas', fechas);
     });
 
-
-    $('#btnVaciarVentas').click(function() {
+$('#btnVaciarVentas').click(function() {
       // Vaciar los datos de la tabla
       $('#tablaVentas').empty();
 
 	  $('#tablaVentas').attr('hidden', true);
     });
 
-
       // Mostrar la tabla eliminando el atributo "hidden"
-      $('#tablaVentas').removeAttr('hidden');
-    });
-
+$('#tablaVentas').removeAttr('hidden');
 
 </script>
