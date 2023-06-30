@@ -37,11 +37,6 @@
  				<span class="glyphicon glyphicon-remove"></span>
  			</span>
  		</td>
-		 <td style="border: 2px solid black;">
-            <a href="fpdf/ticketVenta.php" target="_blank" class="btn btn-success"><i class="fas fa-file-pdf"></i>
-                Ticket
-            </a>
-        </td>
 
  	</tr>
 
@@ -54,8 +49,20 @@
  ?>
 
  	<tr>
- 		<td>Total de venta: <?php echo "Bs.".$total; ?></td>
+ 		<td> Total de venta: <?php echo "Bs.".$total; ?></td>
+		 <td>
+		 <td>
+		 <td>
+		 <td style="border: 2px solid black;">
+            <a href="fpdf/ticketVenta.php" target="_blank" class="btn btn-success"><i class="fas fa-file-pdf"></i>
+                Ticket
+            </a>
+        </td>
+		</td>
+		</td>
+		</td>
  	</tr>
+	
 
  </table>
 

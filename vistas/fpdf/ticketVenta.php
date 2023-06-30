@@ -10,10 +10,7 @@ class PDF extends FPDF
    // Cabecera de página
    function Header()
    {
-      //include '../../clases/Conexion.php';//llamamos a la conexion BD
 
-      //$consulta_info = $conexion->query(" select *from hotel ");//traemos datos de la empresa desde BD
-      //$dato_info = $consulta_info->fetch_object();
       $this->Image('../../img/LOGO3.png', 5, 5, 12); //logo de la empresa,moverDerecha,moverAbajo,tamañoIMG
       $this->SetFont('Arial', 'B', 10); //tipo fuente, negrita(B-I-U-BIU), tamañoTexto
       $this->Cell(5); // Movernos a la derecha
@@ -27,7 +24,7 @@ class PDF extends FPDF
 
       /* CAMPOS DE LA TABLA */
       //color
-      $this->Ln(5); // Salto de línea
+      $this->Ln(2); // Salto de línea
       $this->SetFillColor(228, 100, 0); //colorFondo
       $this->SetTextColor(255, 255, 255); //colorTexto
       $this->SetDrawColor(163, 163, 163); //colorBorde
@@ -43,17 +40,12 @@ class PDF extends FPDF
    function Footer()
    {
       $this->SetY(-15); // Posición: a 1,5 cm del final
-      $this->SetFont('Arial', 'I', 10); //tipo fuente, cursiva, tamañoTexto
+      $this->SetFont('Arial', 'B', 10); //tipo fuente, cursiva, tamañoTexto
       $hoy = date('d/m/Y');
       $this->Cell(40, 5, utf8_decode($hoy), 0, 0, 'C'); // pie de pagina(fecha de pagina)
    }
 }
 
-//include '../../clases/Conexion.php';
-//require '../../funciones/CortarCadena.php';
-/* CONSULTA INFORMACION DEL HOSPEDAJE */
-//$consulta_info = $conexion->query(" select *from hotel ");
-//$dato_info = $consulta_info->fetch_object();
 
 $pdf = new PDF();
 //$pdf->AddPage(); /* aqui entran dos para parametros (horientazion,tamaño)V->portrait H->landscape tamaño (A3.A4.A5.letter.legal) */
@@ -65,7 +57,7 @@ $pdf->SetFont('Arial', '', 7);
 $pdf->SetDrawColor(163, 163, 163); //colorBorde
 
 
-
+$total= 0;
 $i = $i + 1;
 /* TABLA */
 if (isset($_SESSION['tablaComprasTemp']) && is_array($_SESSION['tablaComprasTemp'])) {
@@ -76,12 +68,15 @@ if (isset($_SESSION['tablaComprasTemp']) && is_array($_SESSION['tablaComprasTemp
        $nombre = $d[1];
        $precio = $d[3];
        $cantidad = $d[6];
-
+      
+       $total = $total + ($d[3] * $d[6]);
        // Agregar los datos al PDF
        $pdf->Cell(12, 7, utf8_decode($nombre), 1, 0, 'C', 0);
        $pdf->Cell(12, 7, utf8_decode($precio), 1, 0, 'C', 0);
        $pdf->Cell(14, 7, utf8_decode($cantidad), 1, 1, 'C', 0);
-   }
+ 	}
+    $pdf->SetFont('Arial', 'B', 7);
+    $pdf->Cell(38, 7, utf8_decode("Total de venta: " . "Bs. ". $total), 1, 1, 'C', 0);
 }
 
 
