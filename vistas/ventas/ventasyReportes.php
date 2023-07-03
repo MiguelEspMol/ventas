@@ -48,7 +48,7 @@
             </table>
 	</div>
 
-	<form id="formFechas" action="../procesos/ventas/proceso_ventas.php" method="POST">
+	<form id="formFechas" action="fpdf/reporteVenta.php" method="GET">
   		<div class="form-group">
     		<label for="fechaInicio">Fecha de inicio:</label>
     		<input type="date" class="form-control" id="fechaInicio" name="fechaInicio" style="border: 1px solid black; background-color: #ffbf77;">
