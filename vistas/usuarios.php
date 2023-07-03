@@ -10,18 +10,21 @@ if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='admin'){
 	</head>
 	<body>
 		<div class="container">
-			<h1>Administrar usuarios</h1>
+			<br>
+			<br>
+			<h1></h1>
 			<div class="row">
 				<div class="col-sm-4">
 					<form id="frmRegistro">
 						<label>Nombre</label>
 						<input type="text" class="form-control input-sm" name="nombre" id="nombre" style="border: 1px solid black;">
+						<br>
 						<label>Apellido</label>
 						<input type="text" class="form-control input-sm" name="apellido" id="apellido" style="border: 1px solid black;">
+						<br>
 						<label>Usuario</label>
 						<input type="text" class="form-control input-sm" name="usuario" id="usuario" style="border: 1px solid black;">
-						<label>Password</label>
-						<input type="text" class="form-control input-sm" name="password" id="password" style="border: 1px solid black;">
+						<br>
 						<p></p>
 						<span class="btn btn-primary" id="registro">Registrar</span>
 
@@ -95,9 +98,9 @@ if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='admin'){
 					success:function(r){
 						if(r==1){
 							$('#tablaUsuariosLoad').load('usuarios/tablaUsuarios.php');
-							alertify.success("Eliminado con exito!!");
+							alertify.success("Eliminado con exito");
 						}else{
-							alertify.error("No se pudo eliminar :(");
+							alertify.error("No se pudo eliminar");
 						}
 					}
 				});
@@ -122,9 +125,9 @@ if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='admin'){
 
 						if(r==1){
 							$('#tablaUsuariosLoad').load('usuarios/tablaUsuarios.php');
-							alertify.success("Actualizado con exito :D");
+							alertify.success("Actualizado con exito");
 						}else{
-							alertify.error("No se pudo actualizar :(");
+							alertify.error("No se pudo actualizar");
 						}
 					}
 				});

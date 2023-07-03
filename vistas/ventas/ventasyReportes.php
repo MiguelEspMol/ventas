@@ -24,7 +24,9 @@
 	$result=mysqli_query($conexion,$sql); 
 	?>
 
-<h4>Reportes y ventas</h4>
+<h4></h4>
+<br>
+<br>
 <div class="row">
 	<div class="col-sm-1"></div>
 	<div class="col-sm-10">
@@ -58,7 +60,7 @@
     		<input type="date" class="form-control" id="fechaFin" name="fechaFin" style="border: 1px solid black; background-color: #ffbf77;">
   		</div>
   		<button type="submit" class="btn btn-primary" id="buscarFechas">Buscar Ventas</button>
-  		<button type="button" class="btn btn-danger" id="btnVaciarVentas">Vaciar Ventas</button>
+  		<button type="button" class="btn btn-danger" id="btnVaciarVentasHechas">Vaciar Ventas</button>
 	</form>
 
 	</div>
@@ -69,18 +71,6 @@
 </div>
 
 <script>
-
-$(document).ready(function() {
-
-	$('#btnVaciarVentasHechas').click(function() {
-		$.ajax({
-			url: "../procesos/ventas/vaciarTempHechas.php",
-			success: function(r){
-				$('#ventasyReportesLoad').load("ventas/ventasyReportes.php");
-			}
-		 });
-	 });
-});
 
 $('#buscarFechas').on('click', '#formFechas button[type="submit"]', function() {
         var fechas = [];
@@ -93,14 +83,26 @@ $('#buscarFechas').on('click', '#formFechas button[type="submit"]', function() {
         $('#formFechas').data('fechas', fechas);
     });
 
-$('#btnVaciarVentas').click(function() {
-      // Vaciar los datos de la tabla
-      $('#tablaVentas').empty();
+	$('#btnVaciarVentasHechas').click(function() {
+    // Vaciar los datos de la tabla visualmente
+    $('#tablaVentas').empty();
 
-	  $('#tablaVentas').attr('hidden', true);
-    });
+    // Ocultar la tabla de ventas
+    $('#tablaVentas').hide();
 
-      // Mostrar la tabla eliminando el atributo "hidden"
-$('#tablaVentas').removeAttr('hidden');
+    // Almacenar el estado de la tabla vacía en el almacenamiento local del navegador
+    localStorage.setItem('tablaVentasVacia', 'true');
+});
 
+$(document).ready(function() {
+    // Verificar si el estado de la tabla de ventas es "vacia" en el almacenamiento local
+    var tablaVentasVacia = localStorage.getItem('tablaVentasVacia');
+
+    // Mostrar u ocultar la tabla de ventas según el estado almacenado
+    if (tablaVentasVacia === 'true') {
+        $('#tablaVentas').hide();
+    } else {
+        $('#tablaVentas').show();
+    }
+});
 </script>

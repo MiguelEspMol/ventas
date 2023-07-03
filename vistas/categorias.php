@@ -15,10 +15,12 @@ if(isset($_SESSION['usuario'])){
 
 		<div class="container">
 			<h1></h1>
+			<br>
+			<br>
 			<div class="row">
 				<div class="col-sm-4">
 					<form id="frmCategorias">
-						<label>Ingresar los Almuerzos</label>
+						<label>Ingresa la Categoria</label>
 						<input type="text" class="form-control input-sm" name="categoria" id="categoria" style="border: 1px solid black;">
 						<p></p>
 						<span class="btn btn-primary" id="btnAgregaCategoria">Agregar</span>
@@ -38,12 +40,12 @@ if(isset($_SESSION['usuario'])){
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Actualiza categorias</h4>
+						<h4 class="modal-title" id="myModalLabel">Actualizar Categoria</h4>
 					</div>
 					<div class="modal-body">
 						<form id="frmCategoriaU">
 							<input type="text" hidden="" id="idcategoria" name="idcategoria">
-							<label>Cantidas</label>
+							<label>Nombre</label>
 							<input type="text" id="categoriaU" name="categoriaU" class="form-control input-sm">
 						</form>
 

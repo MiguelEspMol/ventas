@@ -6,13 +6,15 @@ $conexion=$c->conexion();
 ?>
 
 
-<h4>Vender un Almuerzo</h4>
+<h4></h4>
+<br>
+<br>
 <div class="row">
 	<div class="col-sm-4">
 		<form id="frmVentasProductos">
-			<label>Almuerzo</label>
+			<label>Categoria</label>
 			<select class="form-control input-sm" id="productoVenta" name="productoVenta" style="border: 1px solid black;">
-				<option value="A">Seleccionar</option>
+				<option value="A"></option>
 				<?php
 				$sql="SELECT id_producto,
 				nombre
@@ -24,8 +26,11 @@ $conexion=$c->conexion();
 					<option value="<?php echo $producto[0] ?>"><?php echo $producto[1] ?></option>
 				<?php endwhile; ?>
 			</select>
+			<br>
+			<br>
 			<label>Cantidad</label>
 			<input type="text" class="form-control input-sm" id="cantidadV" name="cantidadV" style="border: 1px solid black;">
+			<br>
 			<label>Precio</label>
 			<input readonly="" type="text" class="form-control input-sm" id="precioV" name="precioV" style="border: 1px solid black;">
 			<p></p>

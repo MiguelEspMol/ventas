@@ -4,13 +4,9 @@
 	//print_r($_SESSION['tablaComprasTemp']);
  ?>
 
- <h4>Hacer venta: </h4>
+ <h4></h4>
  <table class="table table-bordered table-hover table-condensed" style="text-align: center; border: 2px solid black;">
- 	<caption>
- 		<span class="btn btn-success" onclick="crearVenta()"> Generar venta
-		 <span class="glyphicon glyphicon-usd"></span>
- 		</span>
- 	</caption>
+ 	
  	<tr>
  		<td style="border: 2px solid black; background-color: #ffbf77;">Nombre</td>
  		<td style="border: 2px solid black; background-color: #ffbf77;">Precio</td>
@@ -65,7 +61,13 @@
 	
 
  </table>
-
+ <caption>
+ 		<span class="btn btn-success" onclick="crearVenta()"> GENERAR VENTA
+		 <span class="glyphicon glyphicon-usd"></span>
+ 		</span>
+		 <br>
+		 <br>
+ 	</caption>
 
  <script type="text/javascript">
  	$(document).ready(function(){

@@ -20,7 +20,9 @@ if(isset($_SESSION['usuario'])){
 	</head>
 	<body>
 		<div class="container">
-			<h1>Platos</h1>
+		<br>
+			<h1></h1>
+			<br>
 			<div class="row">
 				<div class="col-sm-4">
 					<form id="frmArticulos" enctype="multipart/form-data">
