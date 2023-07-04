@@ -5,6 +5,37 @@
 <html>
 <head>
 <link rel="stylesheet" href="../css/menu.css">
+<style>
+    /* Añade un estilo para la imagen de la marca en el menú */
+    .navbar-brand {
+      padding: 5px 15px;
+    }
+
+    /* Añade un estilo para el logo en la imagen de la marca */
+    .navbar-brand .logo {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Ajusta el espacio entre la imagen de la marca y los campos del menú en dispositivos móviles */
+    @media (max-width: 767px) {
+      .navbar-collapse {
+        margin-top: 60px;
+      }
+    }
+
+    footer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			margin-top: 30px; /* Ajusta la distancia entre el contenido y el footer */
+			padding: 5px; /* Ajusta el espacio interno del footer */
+			background-color: #ffbf77;
+			text-align: center;
+			font-size: 12px; /* Ajusta el tamaño de fuente del texto del footer */
+	}
+  </style>
   <title></title>
 </head>
 
@@ -75,7 +106,11 @@
 
 <!-- /container -->        
 
-
+<footer style="position: fixed; bottom: 0; left: 0; width: 100%; margin: 0; padding: 10px; background-color: #ffbf77; text-align: center;">
+    <div style="background-color: #ffbf77; padding: 0px;">
+        <p><b>Desarrollado por Miguel Espinoza Mollinedo</b> | <b>Email: miguelespmol@gmail.com</b></p>
+    </div>
+</footer>
 </body>
 </html>
 

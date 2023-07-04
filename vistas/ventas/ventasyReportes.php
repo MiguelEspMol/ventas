@@ -8,6 +8,7 @@
 
 	$obj= new ventas();
 
+
 	$sql = "SELECT fechaCompra, nombre, total_articulos_vendidos, total_venta_producto
 	FROM (
 		SELECT v.fechaCompra, a.nombre, SUM(v.cantidad) AS total_articulos_vendidos, SUM(v.precio) AS total_venta_producto
@@ -72,6 +73,8 @@
 
 <script>
 
+var tablaVentasVacia = true;
+
 $('#buscarFechas').on('click', '#formFechas button[type="submit"]', function() {
         var fechas = [];
 
@@ -91,15 +94,12 @@ $('#buscarFechas').on('click', '#formFechas button[type="submit"]', function() {
     $('#tablaVentas').hide();
 
     // Almacenar el estado de la tabla vacía en el almacenamiento local del navegador
-    localStorage.setItem('tablaVentasVacia', 'true');
+	tablaVentasVacia = true;
 });
 
 $(document).ready(function() {
-    // Verificar si el estado de la tabla de ventas es "vacia" en el almacenamiento local
-    var tablaVentasVacia = localStorage.getItem('tablaVentasVacia');
-
     // Mostrar u ocultar la tabla de ventas según el estado almacenado
-    if (tablaVentasVacia === 'true') {
+    if (tablaVentasVacia) {
         $('#tablaVentas').hide();
     } else {
         $('#tablaVentas').show();
