@@ -20,7 +20,6 @@ if(isset($_SESSION['usuario'])){
 	</head>
 	<body>
 		<div class="container">
-		<br>
 			<h1></h1>
 			<br>
 			<div class="row">
@@ -41,9 +40,7 @@ if(isset($_SESSION['usuario'])){
 						<input type="text" class="form-control input-sm" id="cantidad" name="cantidad" style="border: 1px solid black;">
 						<label>Precio</label>
 						<input type="text" class="form-control input-sm" id="precio" name="precio" style="border: 1px solid black;">
-						<label>Imagen</label>
-						<input type="file" id="imagen" name="imagen">
-						<p></p>
+						<br>
 						<span id="btnAgregaArticulo" class="btn btn-primary">Agregar</span>
 					</form>
 				</div>

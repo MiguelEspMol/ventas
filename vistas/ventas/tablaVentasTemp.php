@@ -5,7 +5,37 @@
  ?>
 
  <h4></h4>
- <table class="table table-bordered table-hover table-condensed" style="text-align: center; border: 2px solid black;">
+ <style>
+	@media (max-width: 767px) {
+		.table-ventas {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	/* Estilos para dispositivos de escritorio */
+	@media (min-width: 768px) {
+		.table-ventas {
+			margin-left: 200px;
+		}
+	}
+
+	@media (max-width: 767px) {
+	.btn-generar-venta {
+		margin-left: 0;
+		margin-right: auto;
+		display: block;
+	}
+}
+
+/* Estilos para dispositivos de escritorio */
+@media (min-width: 768px) {
+	.btn-generar-venta {
+		margin-left: 200px;
+	}
+}
+</style>
+ <table class="table table-bordered table-hover table-condensed table-ventas" style="text-align: center; border: 2px solid black;">
  	
  	<tr>
  		<td style="border: 2px solid black; background-color: #ffbf77;">Nombre</td>
@@ -62,7 +92,7 @@
 
  </table>
  <caption>
- 		<span class="btn btn-success" onclick="crearVenta()"> GENERAR VENTA
+ 		<span class="btn btn-success btn-generar-venta" onclick="crearVenta()"> GENERAR VENTA
 		 <span class="glyphicon glyphicon-usd"></span>
  		</span>
 		 <br>

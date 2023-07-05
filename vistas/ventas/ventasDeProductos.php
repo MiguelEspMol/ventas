@@ -38,9 +38,6 @@ $conexion=$c->conexion();
 			<span class="btn btn-danger" id="btnVaciarVentas">Vaciar ventas</span>
 		</form>
 	</div>
-	<div class="col-sm-3">
-		<div id="imgProducto"></div>
-	</div>
 	<div class="col-sm-4">
 		<div id="tablaVentasTempLoad"></div>
 	</div>
@@ -63,8 +60,6 @@ $conexion=$c->conexion();
 					$('#cantidadV').val(dato['cantidad']);
 					$('#cantidadV').data('cantidad-disponible', dato['cantidad']);
 					$('#precioV').val(dato['precio']);
-
-					$('#imgProducto').prepend('<img class="img-thumbnail" id="imgp" src="' + dato['ruta'] + '" />');
 				}
 			});
 		});

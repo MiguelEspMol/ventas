@@ -106,9 +106,9 @@
 
 <!-- /container -->        
 
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; margin: 0; padding: 10px; background-color: #ffbf77; text-align: center;">
+<footer style="position: fixed; bottom: 0; left: 0; width: 100%; height: 5%; margin: 0; padding: 10px; background-color: #ffbf77; text-align: center;">
     <div style="background-color: #ffbf77; padding: 0px;">
-        <p><b>Desarrollado por Miguel Espinoza Mollinedo</b> | <b>Email: miguelespmol@gmail.com</b></p>
+        <p><b><small>Desarrollado por Miguel Espinoza Mollinedo</small></b> | <b><small>Email: miguelespmol@gmail.com</small></b></p>
     </div>
 </footer>
 </body>

@@ -37,6 +37,7 @@
 			.container {
 				max-width: 100%; /* Ancho máximo del contenedor para pantallas pequeñas */
 				padding: 20px; /* Añade espacio alrededor del contenedor en pantallas pequeñas */
+				background: linear-gradient(to bottom, #ffbf77 1%, #ff9c2d 12%);
 			}
 		}
 
@@ -86,6 +87,7 @@
 						<form id="frmLogin">
 							<label>Usuario</label>
 							<input type="text" class="form-control input-sm" name="usuario" id="usuario">
+							<br>
 							<label>Contraseña</label>
 							<input type="password" name="password" id="password" class="form-control input-sm">
 							<p></p>
@@ -94,10 +96,6 @@
 							<a href="registro.php" class="btn btn-danger btn-sm">Registrar</a>
 							<?php endif; ?>
 						</form>
-						<div class="login-form-forgotpassword form-group text-center">
-						<br>
-     						<a href="cambiarContrasenha.php">¿Ha olvidado su contraseña?</a>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -109,7 +107,7 @@
 	<br>
 	<footer style="position: fixed; bottom: 0; left: 0; width: 100%; margin: 0; padding: 10px; background-color: #ffbf77; text-align: center;">
     <div style="background-color: #ffbf77; padding: 0px;">
-        <p><b>Desarrollado por Miguel Espinoza Mollinedo</b> | <b>Email: miguelespmol@gmail.com</b></p>
+        <p><b><small>Desarrollado por Miguel Espinoza Mollinedo</small></b> | <b><small>Email: miguelespmol@gmail.com</small></b></p>
     </div>
 </footer>
 

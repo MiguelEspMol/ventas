@@ -14,8 +14,9 @@
  ?>
 
 
-<table class="table table-hover table-condensed table-bordered" style="text-align: center; border: 2px solid black;">
-	<caption><label>Usuarios</label></caption>
+
+<table class="table table-hover table-condensed table-bordered table-usuarios" style="text-align: center; border: 2px solid black;">
+	<caption><label></label></caption>
 	<tr>
 		<td style="border: 2px solid black; background-color: #ffbf77;">Nombre</td>
 		<td style="border: 2px solid black; background-color: #ffbf77;">Apellido</td>

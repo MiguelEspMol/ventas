@@ -81,7 +81,7 @@ $fechaFin = $_GET['fechaFin'];
 
 $pdf = new PDF();
 $pdf->setFechas($fechaInicio, $fechaFin);
-$pdf->AddPage(); /* aqui entran dos para parametros (horientazion,tamaño)V->portrait H->landscape tamaño (A3.A4.A5.letter.legal) */
+$pdf->AddPage('P', 'letter'); /* aqui entran dos para parametros (horientazion,tamaño)V->portrait H->landscape tamaño (A3.A4.A5.letter.legal) */
 $pdf->AliasNbPages(); //muestra la pagina / y total de paginas
 
 
@@ -131,13 +131,12 @@ while ($ver = mysqli_fetch_array($result)) {
    $pdf->Cell(60, 10, utf8_decode($ver['total_articulos_vendidos']), 1, 0, 'C', 0);
    $pdf->Cell(50, 10, utf8_decode("Bs. " . $ver['total_venta_producto']), 1, 1, 'C', 0);
 
-   if ($ver['nombre'] !== 'TOTAL DEL DIA' && !is_null($ver['total_venta_producto'])) {
-      $totalGeneral += $ver['total_venta_producto'];
-   }
-
-   if ($ver['total_articulos_vendidos']) {
+   if ($ver['nombre'] === 'TOTAL DEL DIA') {
       $totalGeneralPlatos += $ver['total_articulos_vendidos'];
-   }
+  } else if (!is_null($ver['total_venta_producto'])) {
+      $totalGeneral += $ver['total_venta_producto'];
+  }
+  
    $fechaAnterior = $fechaActual;
 }
 
