@@ -14,6 +14,25 @@
  ?>
 
 
+<h4></h4>
+<style>
+		/* Estilos para celulares */
+		@media (max-width: 767px) {
+			.table-usuarios {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		/* Estilos para dispositivos de escritorio */
+		@media (min-width: 768px) {
+			.table-usuarios {
+				margin-top: -23px;
+				margin-left: 100px;
+			}
+		}
+</style>
+
 
 <table class="table table-hover table-condensed table-bordered table-usuarios" style="text-align: center; border: 2px solid black;">
 	<caption><label></label></caption>

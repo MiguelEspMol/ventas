@@ -4,10 +4,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 <link rel="stylesheet" href="../css/menu.css">
 <style>
+
+    .navbar .glyphicon-home {
+      margin-right: 3px;
+    }
+ 
+    .navbar .glyphicon-list-alt {
+      margin-right: 3px;
+    }
+
+    .navbar .glyphicon-usd {
+      margin-right: 3px;
+    }
+
+    .navbar .glyphicon-user {
+      margin-right: 3px;
+    }
+
+    .navbar .glyphicon-off {
+      margin-right: 3px;
+    }
+
     /* Añade un estilo para la imagen de la marca en el menú */
     .navbar-brand {
+      background-color: #ff9c2d;
       padding: 5px 15px;
     }
 
@@ -35,6 +58,56 @@
 			text-align: center;
 			font-size: 12px; /* Ajusta el tamaño de fuente del texto del footer */
 	}
+
+    /* Estilos para el botón de navegación en dispositivos móviles */
+.navbar-toggle {
+  background: none;
+  border: none;
+  padding: 10px;
+  margin-right: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Estilos para el estado desplegado del botón de navegación */
+.navbar-toggle.collapsed .icon-bar {
+  background-color: #fff;
+}
+
+/* Estilos para la animación de apertura del menú */
+.navbar-toggle .top-bar {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+
+.navbar-toggle .bottom-bar {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* Estilos para el estado desplegado de la animación */
+.navbar-toggle.collapsed .top-bar {
+  transform: none;
+}
+
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+
+.navbar-toggle.collapsed .bottom-bar {
+  transform: none;
+}
+  
   </style>
   <title></title>
 </head>
@@ -48,22 +121,24 @@
     <div class="navbar navbar-inverse navbar-fixed-top navbar-background" data-spy="affix" data-offset-top="100" style="background: #ff9c2d;">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
           <a class="navbar-brand" href="inicio.php"><img class="img-responsive logo img-thumbnail" src="../img/LOGO3.png" alt="" width="120px" height="150px" ></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav navbar-right">
 
-            <li class="active"><a href="inicio.php" style="background: #ff9c2d;"><span class="glyphicon glyphicon-home"></span> INICIO</a>
-            </li>
-
-            
+          <li class="nav-item active">
+            <a class="nav-link" href="inicio.php" style="background: #ff9c2d;">
+              <i class="fas fa-house-user fa-lg"></i>
+                <span class="nav-text"><b>INICIO</b></span>
+            </a>
+          </li> 
           </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span><b> ADMINISTRAR ALMUERZOS</b><span class="caret"></span></a>

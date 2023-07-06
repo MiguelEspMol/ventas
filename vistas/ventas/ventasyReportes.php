@@ -51,15 +51,18 @@
             </table>
 	</div>
 
+					
 	<form id="formFechas" action="fpdf/reporteVenta.php" method="GET">
   		<div class="form-group">
     		<label for="fechaInicio">Fecha de inicio:</label>
     		<input type="date" class="form-control" id="fechaInicio" name="fechaInicio" style="border: 1px solid black; background-color: #ffbf77;">
   		</div>
+		  <br>
   		<div class="form-group">
     		<label for="fechaFin">Fecha de fin:</label>
     		<input type="date" class="form-control" id="fechaFin" name="fechaFin" style="border: 1px solid black; background-color: #ffbf77;">
   		</div>
+		  <br>
   		<button type="submit" class="btn btn-primary" id="buscarFechas">Buscar Ventas</button>
   		<button type="button" class="btn btn-danger" id="btnVaciarVentasHechas">Vaciar Ventas</button>
 	</form>

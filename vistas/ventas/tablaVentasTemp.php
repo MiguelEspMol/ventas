@@ -36,7 +36,7 @@
 }
 </style>
  <table class="table table-bordered table-hover table-condensed table-ventas" style="text-align: center; border: 2px solid black;">
- 	
+ <br>
  	<tr>
  		<td style="border: 2px solid black; background-color: #ffbf77;">Nombre</td>
  		<td style="border: 2px solid black; background-color: #ffbf77;">Precio</td>
@@ -95,7 +95,6 @@
  		<span class="btn btn-success btn-generar-venta" onclick="crearVenta()"> GENERAR VENTA
 		 <span class="glyphicon glyphicon-usd"></span>
  		</span>
-		 <br>
 		 <br>
  	</caption>
 

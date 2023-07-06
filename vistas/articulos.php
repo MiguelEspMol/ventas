@@ -27,7 +27,7 @@ if(isset($_SESSION['usuario'])){
 					<form id="frmArticulos" enctype="multipart/form-data">
 						<label>Categoria</label>
 						<select class="form-control input-sm" id="categoriaSelect" name="categoriaSelect" style="border: 1px solid black;">
-							<option value="A">Selecciona Categoria</option>
+							<option value="A"></option>
 							<?php while($ver=mysqli_fetch_row($result)): ?>
 								<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
 							<?php endwhile; ?>
