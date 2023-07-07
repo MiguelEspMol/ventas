@@ -41,7 +41,7 @@
 
 	@media (min-width: 769px) {
       body {
-        background-position-y: 40px; /* Ajusta el valor de píxel según las necesidades */
+        background-position-y: 1px; /* Ajusta el valor de píxel según las necesidades */
       }
     }
   </style>
