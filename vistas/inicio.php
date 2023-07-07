@@ -30,7 +30,7 @@
 			padding: 5px; /* Ajusta el espacio interno del footer */
 			background-color: #ffbf77;
 			text-align: center;
-			font-size: 12px; /* Ajusta el tamaño de fuente del texto del footer */
+			font-size: 10px; /* Ajusta el tamaño de fuente del texto del footer */
 	}
 
 	@media (max-width: 768px) {

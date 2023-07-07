@@ -56,7 +56,7 @@
 			padding: 5px; /* Ajusta el espacio interno del footer */
 			background-color: #ffbf77;
 			text-align: center;
-			font-size: 12px; /* Ajusta el tamaño de fuente del texto del footer */
+			font-size: 10px; /* Ajusta el tamaño de fuente del texto del footer */
 	}
 
     /* Estilos para el botón de navegación en dispositivos móviles */
@@ -150,14 +150,6 @@
 
         <li><a href="ventas.php"><span class="glyphicon glyphicon-usd"></span><b> VENDER ALMUERZO</b></a>
           </li>
-        <?php
-        if($_SESSION['usuario']=="admin"):
-         ?>
-           <li><a href="usuarios.php"><span class="glyphicon glyphicon-user"></span><b> ADMINISTRAR USUARIOS</b></a>
-            </li>
-         <?php 
-       endif;
-          ?>
           
           <li class="dropdown" >
             <a href="#" style="color: red"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" ></span> <b>USUARIO:</b> <?php echo $_SESSION['usuario']; ?>  <span class="caret"></span></a>

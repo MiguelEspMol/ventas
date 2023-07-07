@@ -162,7 +162,7 @@ if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='admin'){
 							$('#tablaUsuariosLoad').load('usuarios/tablaUsuarios.php');
 							alertify.success("Agregado con exito");
 						}else{
-							alertify.error("Fallo al agregar :(");
+							alertify.error("Fallo al agregar");
 						}
 					}
 				});

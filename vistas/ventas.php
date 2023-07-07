@@ -14,14 +14,14 @@
 		/* Estilos para celulares */
 		@media (max-width: 767px) {
 			.btn-ventaProducto {
-				margin-left: 15px;
+				margin-left: 24px;
 				margin-right: auto;
 			}
 		}
 
 		@media (max-width: 767px) {
 			.btn-ventasHechas {
-				margin-left: 70px;
+				margin-left: 40px;
 				margin-right: auto;
 			}
 		}
@@ -50,7 +50,7 @@
 		 <br>
 		 <div class="row">
 		 	<div class="col-sm-12">
-		 		<span class="btn btn-default btn-ventaProducto" id="ventaProductosBtn" style="border: 1px solid black; background-color: #ffbf77;"><b>Vender Almuerzo</b></span>
+		 		<span class="btn btn-default btn-ventaProducto" id="ventaProductosBtn" style="border: 1px solid black; background-color: #ffbf77;"><b>Realizar Venta</b></span>
 		 		<span class="btn btn-default btn-ventasHechas" id="ventasHechasBtn" style="border: 1px solid black; background-color: #ffbf77;"><b>Ventas Hechas</b></span>
 		 	</div>
 		 </div>
