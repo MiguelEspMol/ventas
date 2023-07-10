@@ -34,8 +34,8 @@ $conexion=$c->conexion();
 			<input readonly="" type="text" class="form-control input-sm" id="precioV" name="precioV" style="border: 1px solid black;">
 			<p></p>
 			<br>
-			<span class="btn btn-primary" id="btnAgregaVenta">Agregar</span>
-			<span class="btn btn-danger" id="btnVaciarVentas">Vaciar ventas</span>
+			<span class="btn btn-primary" id="btnAgregaVenta"><b>Agregar</b></span>
+			<span class="btn btn-danger" id="btnVaciarVentas"><b>Cancelar Venta</b></span>
 		</form>
 	</div>
 	<div class="col-sm-4">
