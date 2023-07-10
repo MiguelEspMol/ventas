@@ -36,7 +36,7 @@
 
 		@media (min-width: 768px) {
 			.btn-ventasHechas {
-				margin-left: 100px;
+				margin-left: 750px;
 				font-size: 15px;
 			}
 		}

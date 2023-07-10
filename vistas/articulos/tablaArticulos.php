@@ -38,14 +38,14 @@
     <table class="table table-hover table-condensed table-bordered" style="text-align: center; border: 2px solid black;">
         <br>
         <tr>
-            <td style="border: 2px solid black; background-color: #ffbf77;">Nombre</td>
-            <td style="border: 2px solid black; background-color: #ffbf77;">Descripcion</td>
-            <td style="border: 2px solid black; background-color: #ffbf77;">Cantidad</td>
-            <td style="border: 2px solid black; background-color: #ffbf77;">Precio</td>
-            <td style="border: 2px solid black; background-color: #ffbf77;">Categoria</td>
-            <td style="border: 2px solid black; background-color: #ffbf77;">Fecha</td>
-            <td style="border: 2px solid black; background-color: #ffbf77;">Editar</td>
-            <td style="border: 2px solid black; background-color: #ffbf77;">Eliminar</td>
+            <td style="border: 2px solid black; background-color: #ffbf77;"><strong>Nombre</strong></td>
+            <td style="border: 2px solid black; background-color: #ffbf77;"><strong>Descripcion</strong></td>
+            <td style="border: 2px solid black; background-color: #ffbf77;"><strong>Cantidad</strong></td>
+            <td style="border: 2px solid black; background-color: #ffbf77;"><strong>Precio</strong></td>
+            <td style="border: 2px solid black; background-color: #ffbf77;"><strong>Categoria</strong></td>
+            <td style="border: 2px solid black; background-color: #ffbf77;"><strong>Fecha</strong></td>
+            <td style="border: 2px solid black; background-color: #ffbf77;"><strong>Editar</strong></td>
+            <td style="border: 2px solid black; background-color: #ffbf77;"><strong>Eliminar</strong></td>
         </tr>
 
         <?php while($ver = mysqli_fetch_row($result)): ?>

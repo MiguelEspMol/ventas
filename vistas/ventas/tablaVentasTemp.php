@@ -16,7 +16,7 @@
 	/* Estilos para dispositivos de escritorio */
 	@media (min-width: 768px) {
 		.table-ventas {
-			margin-left: 200px;
+			margin-left: 365px;
 		}
 	}
 
@@ -31,18 +31,18 @@
 /* Estilos para dispositivos de escritorio */
 @media (min-width: 768px) {
 	.btn-generar-venta {
-		margin-left: 200px;
+		margin-left: 365px;
 	}
 }
 </style>
  <table class="table table-bordered table-hover table-condensed table-ventas" style="text-align: center; border: 2px solid black;">
  <br>
  	<tr>
- 		<td style="border: 2px solid black; background-color: #ffbf77;">Nombre</td>
- 		<td style="border: 2px solid black; background-color: #ffbf77;">Precio</td>
- 		<td style="border: 2px solid black; background-color: #ffbf77;">Cantidad</td>
- 		<td style="border: 2px solid black; background-color: #ffbf77;">Quitar</td>
-		<td style="border: 2px solid black; background-color: #ffbf77;">Ticket</td>
+ 		<td style="border: 2px solid black; background-color: #ffbf77;"><strong>Nombre</strong></td>
+ 		<td style="border: 2px solid black; background-color: #ffbf77;"><strong>Precio</strong></td>
+ 		<td style="border: 2px solid black; background-color: #ffbf77;"><strong>Cantidad</strong></td>
+ 		<td style="border: 2px solid black; background-color: #ffbf77;"><strong>Quitar</strong></td>
+		<td style="border: 2px solid black; background-color: #ffbf77;"><strong>Ticket</strong></td>
  	</tr>
  	<?php 
  	$total= 0;//esta variable tendra el total de la compra en dinero

@@ -4,9 +4,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 <link rel="stylesheet" href="../css/menu.css">
 <style>
+
+body {
+  margin: 0;
+  padding: 90px 70px 70px;
+  background-color: #e0e0e0;
+  background-image: url("../img/Fondo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 70px 7px 7px; /* Ajusta el espacio interno del cuerpo en dispositivos móviles */
+    background-size: contain; /* Ajusta el tamaño de la imagen para que quepa completamente en el fondo */
+    background-position: auto; /* Ajusta la posición vertical de la imagen en dispositivos móviles */
+  }
+}
+
 
     .navbar .glyphicon-home {
       margin-right: 3px;

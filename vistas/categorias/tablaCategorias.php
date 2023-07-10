@@ -14,9 +14,9 @@
 <table class="table table-hover table-condensed table-bordered" style="text-align: center; border: 2px solid black;">
 <br>
 	<tr>
-		<td style="border: 2px solid black; background-color: #ffbf77;">Nombre</td>
-		<td style="border: 2px solid black; background-color: #ffbf77;">Editar</td>
-		<td style="border: 2px solid black; background-color: #ffbf77;">Eliminar</td>
+		<td style="border: 2px solid black; background-color: #ffbf77;"><strong>Nombre</strong></td>
+		<td style="border: 2px solid black; background-color: #ffbf77;"><strong>Editar</strong></td>
+		<td style="border: 2px solid black; background-color: #ffbf77;"><strong>Eliminar</strong></td>
 	</tr>
 
 	<?php

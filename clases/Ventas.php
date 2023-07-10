@@ -9,27 +9,20 @@ class ventas{
 				    art.nombre,
 				    art.descripcion,
 				    art.cantidad,
-				    img.ruta,
 				    art.precio
 				FROM
 				    articulos AS art
-				        INNER JOIN
-				    imagenes AS img ON art.id_imagen = img.id_imagen
-				        AND art.id_producto = '$idproducto'";
+				WHERE
+				    art.id_producto = '$idproducto'";
 		$result=mysqli_query($conexion,$sql);
 
 		$ver=mysqli_fetch_row($result);
-
-		$d=explode('/', $ver[3]);
-
-		$img=$d[1].'/'.$d[2].'/'.$d[3];
 
 		$data=array(
 			'nombre' => $ver[0],
 			'descripcion' => $ver[1],
 			'cantidad' => $ver[2],
-			'ruta' => $img,
-			'precio' => $ver[4]
+			'precio' => $ver[3]
 		);		
 		return $data;
 	}
