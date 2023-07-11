@@ -161,14 +161,14 @@ body {
           </li> 
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span><b> ADMINISTRAR ALMUERZOS</b><span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span><b> ADMINISTRAR PRODUCTOS</b><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="categorias.php"><b>CATEGORIAS</b></a></li>
               <li><a href="articulos.php"><b>PLATOS</b></a></li>
             </ul>
           </li>
 
-        <li><a href="ventas.php"><span class="glyphicon glyphicon-usd"></span><b> VENDER ALMUERZO</b></a>
+        <li><a href="ventas.php"><span class="glyphicon glyphicon-usd"></span><b>VENTAS</b></a>
           </li>
           
           <li class="dropdown" >
